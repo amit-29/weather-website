@@ -9,6 +9,7 @@ const forecast=require('./utils/forecast')
 //console.log(path.join(__dirname,'../public'))
 
 const app=express()
+const port=process.env.PORT || 3000
 //define path for express config
 console.log(path.join(__dirname,'../public'))
 const viewsPath=path.join(__dirname,'../templates/views')
@@ -118,6 +119,6 @@ res.render('404',{
 
 })
 
-app.listen(3000,()=>{
-    console.log('server on port 3000')
+app.listen(port,()=>{
+    console.log('server on port '+ port)
 })
